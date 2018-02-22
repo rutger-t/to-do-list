@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Task.create(name: 'Shower', description: 'Take a shower')
+Task.create(name: 'Study', description: 'Study Ruby on Rails')
+Task.create(name: 'Lunch', description: 'Lunch with Luke')
+Task.create(name: 'Sleep', description: 'Sleep at 8pm')
+Task.create(name: 'Dinner', description: 'Dinner with Mona')
+Task.create(name: 'Gym', description: 'Weekly workout')

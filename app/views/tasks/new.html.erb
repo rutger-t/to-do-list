@@ -1,3 +1,5 @@
+<% provide(:title, "New") %>
+
 <h1>New Task</h1>
 
     <%= form_for(@task, url: register_path) do |f| %>
@@ -9,4 +11,8 @@
 
       <%= f.submit "Create task"%>
     <% end %>
-    <p> <%= link_to "home", root_path %></p>
+
+    &nbsp;
+    
+    <p> <%= link_to "home", root_path, class: "btn btn-primary btn-md" %></p>
+    

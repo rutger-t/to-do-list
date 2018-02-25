@@ -1,3 +1,5 @@
+<% provide(:title, "Edit") %>
+
 <h1>Edit Task</h1>
 
 <%= form_for(@task) do |f| %>
@@ -9,5 +11,9 @@
 
     <%= f.submit "Save Changes"%>
   <% end %>
-</div>
-</div>
+ 
+  &nbsp;
+
+  <p> <%= link_to "delete", @task, method: :delete,
+  data: { confirm: "You sure?" }, class: "btn btn-danger btn-md" %></p>
+  <p> <%= link_to "home", root_path, class: "btn btn-primary btn-md" %></p>

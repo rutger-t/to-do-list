@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'tasks/new'
 
   get "/edit", to: "tasks#edit"
-  get "/edit/", to: "tasks#create"
+  get "/edit", to: "tasks#create"
 
   get 'tasks/update'
 

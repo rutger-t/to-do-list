@@ -1,19 +1,33 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<% provide(:title, "Home") %>
 
-<table>
-  <tr>
-    <th>name</th>
-    <th>description</th>
-  </tr>
-  <% @tasks.each do |task| %>
+<h1>Home</h1>
+<p>List of all tasks</p>
+
+<table class="table table-bordered">
+  <thead>
     <tr>
-      <td><%= link_to task.name, task_path(task) %></td>
-      <td><%= task.description %></td>
-      <td><%= link_to "delete", task, method: :delete,
-      data: { confirm: "You sure?" } %></td>
-      <td><%= link_to "edit", edit_task_path(task) %></td>
+      <th>name</th>
+      <th>description</th>
+      <th>delete</th>
+      <th>edit</th>
     </tr>
-  <% end %>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= link_to task.name, task_path(task) %></td>
+        <td><%= task.description %></td>
+        <td><%= link_to "delete", task, method: :delete,
+        data: { confirm: "You sure?" }, class: "btn btn-danger btn-xs" %></td>
+        <td><%= link_to "edit", edit_task_path(task), class: "btn btn-primary btn-xs" %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
-<p> <%= link_to "add", register_path(@task) %></p>
+
+&nbsp;
+
+<center>
+<p> <%= link_to "add", register_path(@task), class: "btn btn-primary btn-lg" %></p>
+</center>
+

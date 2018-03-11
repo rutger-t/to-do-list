@@ -16,12 +16,14 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
-      <li class="<%= 'active' if current_page?(register_path) %>"><%= link_to "Add Task", register_path %></li>
+      <li class="<%= 'active' if current_page?(new_task_path) %>"><%= link_to "Add Task", new_task_path %></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><%= link_to "English", locale: "en" %></li>
+      <li><%= link_to "Japanese", locale: "jp" %></li>
     </ul>
   </div>
 </nav>

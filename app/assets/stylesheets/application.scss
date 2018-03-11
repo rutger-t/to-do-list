@@ -12,8 +12,9 @@
  *
  */
 
- @import "bootstrap";
  @import "bootstrap-sprockets";
+ @import "bootstrap";
+ 
 
  .btn-primary a, .btn-primary:hover a, .btn-primary:active a, .btn-primary:visited a {
     color: #ffffff !important;

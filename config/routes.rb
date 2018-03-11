@@ -1,24 +1,9 @@
 Rails.application.routes.draw do
-
+  scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
   root to: 'tasks#index'
-
-  get 'tasks/new'
-
-  get "/edit", to: "tasks#edit"
-  get "/edit", to: "tasks#create"
-
-  get 'tasks/update'
-
-  get 'tasks/destroy'
-
-  get 'tasks/index'
-
-  get 'tasks/create'
-
   resources:tasks
+  end
 
-  get '/register', to: 'tasks#new'
-  post '/register', to: 'tasks#create'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "*path", to: redirect("/#{I18n.default_locale}/%{path}")
+  get "", to: redirect("/#{I18n.default_locale}")
 end

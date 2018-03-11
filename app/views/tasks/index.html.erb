@@ -1,15 +1,15 @@
 <% provide(:title, "Home") %>
 
-<h1>Home</h1>
-<p>To-Do List App</p>
+<h1><%= t "index.title" %></h1>
+<p><%= t "index.description" %></p>
 
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>name</th>
-      <th>description</th>
-      <th>delete</th>
-      <th>edit</th>
+      <th><%= t "index.table_name" %></th>
+      <th><%= t "index.table_description" %></th>
+      <th><%= t "index.table_delete" %></th>
+      <th><%= t "index.table_edit" %></th>
     </tr>
   </thead>
   <tbody>
@@ -17,9 +17,9 @@
       <tr>
         <td><%= link_to task.name, task_path(task) %></td>
         <td><%= task.description %></td>
-        <td><%= link_to "delete", task, method: :delete,
+        <td><%= link_to t("links.delete"), task, method: :delete,
         data: { confirm: "You sure?" }, class: "btn btn-danger btn-xs" %></td>
-        <td><%= link_to "edit", edit_task_path(task), class: "btn btn-primary btn-xs" %></td>
+        <td><%= link_to t("links.edit"), edit_task_path(task), class: "btn btn-primary btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,6 +28,6 @@
 &nbsp;
 
 <center>
-<p> <%= link_to "add", register_path(@task), class: "btn btn-primary btn-lg" %></p>
+
 </center>
 

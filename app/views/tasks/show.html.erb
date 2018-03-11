@@ -6,7 +6,7 @@
 
 &nbsp;
 
-<p> <%= link_to "edit", edit_task_path(@task), class: "btn btn-primary btn-md" %></p>
-<p> <%= link_to "delete", @task, method: :delete,
+<p> <%= link_to t("links.edit"), edit_task_path(@task), class: "btn btn-primary btn-md" %></p>
+<p> <%= link_to t("links.delete"), @task, method: :delete,
 data: { confirm: "You sure?" }, class: "btn btn-danger btn-md" %></p>
-<p> <%= link_to "home", root_path, class: "btn btn-primary btn-md" %></p>
+<p> <%= link_to t("links.home"), root_path, class: "btn btn-primary btn-md" %></p>

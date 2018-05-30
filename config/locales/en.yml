@@ -6,6 +6,7 @@ en:
     table_description: "Description"
     table_delete: "Delete"
     table_edit: "Edit"
+    table_date: "Date"
   
   links:
     edit: "Edit"

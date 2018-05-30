@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.all
+    @tasks = Task.order(params[:sort])
   end
 
   def show
@@ -41,8 +41,9 @@ class TasksController < ApplicationController
   end
 
   private
-    def task_params
-      params.require(:task).permit(:name, :description)
-    end
+  
+  def task_params
+    params.require(:task).permit(:name, :description)
+  end
 
 end

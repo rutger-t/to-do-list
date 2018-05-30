@@ -6,11 +6,13 @@ jp:
     table_description: "内容"
     table_delete: "削除"
     table_edit: "変更"
+    table_date: "日付"
   
   links:
     edit: "変更"
     delete: "削除"
     home: "ホーム"
+    confirm: "よろしいですか？"
 
   new:
     title: "新しいタスク"

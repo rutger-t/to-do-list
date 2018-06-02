@@ -20,7 +20,7 @@
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><%= link_to "Sign Up", new_user_path %></li>
       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       <li><%= link_to "English", locale: "en" %></li>
       <li><%= link_to "Japanese", locale: "jp" %></li>
@@ -28,6 +28,9 @@
   </div>
 </nav>
     <div class="container">
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
       <%= yield %>
     </div>
   </body>

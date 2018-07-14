@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :tasks
   resources :users
   end
-
+  resources :account_activations, only: [:edit]
   get "*path", to: redirect("/#{I18n.default_locale}/%{path}")
   get "", to: redirect("/#{I18n.default_locale}")
   

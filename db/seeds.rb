@@ -17,8 +17,50 @@ Task.create(name: 'Sleep', description: 'Sleep at 9pm')
 Task.create(name: 'Dinner', description: 'Dinner with Gregg')
 Task.create(name: 'Sports', description: 'Weekly workout')
 
-User.create(name: "Example User", email: "example@railstutorial.org", password: "foobar", password_confirmation: "foobar", admin: true)
-User.create(name: "Example User2", email: "example2@railstutorial.org", password: "foobar", password_confirmation: "foobar", admin: false)
-User.create(name: "Example User3", email: "example3@railstutorial.org", password: "foobar", password_confirmation: "foobar", admin: false)
-User.create(name: "Example User4", email: "example4@railstutorial.org", password: "foobar", password_confirmation: "foobar", admin: false)
-User.create(name: "Example User4", email: "example5@railstutorial.org", password: "foobar", password_confirmation: "foobar", admin: false)
+User.create(name: "Example User", 
+email: "example@railstutorial.org", 
+password: "foobar", 
+password_confirmation: "foobar", 
+admin: true, 
+activated: true,
+activated_at: Time.zone.now)
+
+User.create(name: "Example User2", 
+email: "example2@railstutorial.org", 
+password: "foobar", 
+password_confirmation: "foobar", 
+admin: false,
+activated: true,
+activated_at: Time.zone.now)
+
+User.create(name: "Example User3", 
+email: "example3@railstutorial.org", 
+password: "foobar", 
+password_confirmation: "foobar", 
+admin: false,
+activated: true,
+activated_at: Time.zone.now)
+
+User.create(name: "Example User4", 
+email: "example4@railstutorial.org", 
+password: "foobar", 
+password_confirmation: "foobar", 
+admin: false,
+activated: true,
+activated_at: Time.zone.now)
+
+User.create(name: "Example User5", 
+email: "example5@railstutorial.org", 
+password: "foobar", 
+password_confirmation: "foobar", 
+admin: false,
+activated: true,
+activated_at: Time.zone.now)
+
+User.create(name: "Example User6", 
+email: "example6@railstutorial.org", 
+password: "foobar", 
+password_confirmation: "foobar", 
+admin: false,
+activated: true,
+activated_at: Time.zone.now)
